@@ -16,7 +16,7 @@
         document.getElementById("显示10").textContent = "不合法的输入"
     }else{
         document.getElementById('显示10').textContent = 用户输入
-        var 数字 = Number(用户输入)
+        var 数字 = BigInt(用户输入)
         document.getElementById('显示2').textContent = 数字.toString(2)
     }
     }
