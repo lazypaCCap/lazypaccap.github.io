@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>10进制转2进制</title>
+</head>
+<body>
+    <a href="https://lazypaccap.github.io">主页 </a>&nbsp;&nbsp;<a href="https://lazypaccap.github.io/tool"> 小工具</a>
+    <br>
+    <input type="text" id="输入10" placeholder="键入10进制,自动转换" oninput="更新变量()">
+    <h1>10进制输入:<span id="显示10"></span></h1>
+    <h1>2进制结果:<span id="显示2"></span></h1>
+    <script>
+    function 更新变量() {
+    var 用户输入 = document.getElementById('输入10').value.trim();
+    if(isNaN(Number(用户输入))){
+        document.getElementById("显示10").textContent = "不合法的输入"
+    }else{
+        document.getElementById('显示10').textContent = 用户输入
+        var 数字 = Number(用户输入)
+        document.getElementById('显示2').textContent = 数字.toString(2)
+    }
+    }
+    </script>
+</html>
